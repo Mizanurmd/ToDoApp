@@ -1,0 +1,5 @@
+<html>
+#parse ("src/main/resources/templates/webapp/bodyElement.vm")
+
+<h1> This velocity Template </h1>
+</html>

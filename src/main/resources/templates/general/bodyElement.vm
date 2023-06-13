@@ -1,0 +1,3 @@
+<body>
+#parse ("src/main/resources/templates/general/bodyElement.vm")
+</body>
