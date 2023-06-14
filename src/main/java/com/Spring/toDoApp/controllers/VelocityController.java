@@ -8,17 +8,19 @@ import org.apache.velocity.app.VelocityEngine;
 import org.springframework.stereotype.Controller;
 
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
 public class VelocityController {
 	
 	  @RequestMapping("/exampleVelocity")
-	    String home()throws Exception{
+	  @ResponseBody
+	   public String home()throws Exception{
 	        String result = null;
 
 	        VelocityEngine velocity = new VelocityEngine();
 	        velocity.init();
-	        Template template = velocity.getTemplate("src/main/resources/templates/general/htmlElement.vm");
+	        Template template = velocity.getTemplate("src/main/resources/templates/general/index.vm");
 
 	        VelocityContext context = new VelocityContext();
 	        context.put("title", "Apache Velocity");
@@ -26,9 +28,8 @@ public class VelocityController {
 	        StringWriter writer = new StringWriter();
 	        template.merge(context, writer);
 
-	        result = writer.toString();
+	        return result = writer.toString();
 
-	        return result;
 	}
 
 }
