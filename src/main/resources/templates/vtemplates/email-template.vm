@@ -1,0 +1,8 @@
+<html>
+    <body>
+        <h3>Hello ${us.userName}, welcome to the Velocity Email Template!</h3>
+        <div>
+            Your email address is <a href="mailto:${us.toAddress}">${us.toAddress}</a>.
+        </div>
+    </body>
+</html>
